@@ -220,6 +220,7 @@ public class GameScreen extends ScreenAdapter {
 	private void updateGameOver() {
 		if (Gdx.input.justTouched()) {
 			game.setScreen(new MainMenuScreen(game));
+            Assets.music.pause();
 			Assets.dispose();
 			Assets.load();
 		}
